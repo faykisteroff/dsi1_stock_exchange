@@ -71,7 +71,8 @@ To use moving average (MA) and volume as predictors of stock price movement, and
   - `pandas`: data analysis  
   - `matplotlib`: graphs and plots  
   - `seaborn`: enhanced visualizations  
-  - `sklearn`: model training and AUC ROC visualization  
+  - `sklearn`: model training and AUC ROC visualization
+  - `kagglehub`: interaction with Kaggle data sets
 
 ---
 
