@@ -12,25 +12,26 @@
 
 ## 🧠 Project Overview
 
-**Source:** [Kaggle – Stock Exchange Data](https://www.kaggle.com/)
+**Source:** [Kaggle – Stock Exchange Data](https://www.kaggle.com/datasets/mattiuzc/stock-exchange-data)
 
 Stock market movements are influenced by various factors, and predicting short-term changes is a challenging yet valuable task for investors and analysts. Accurate predictions can help in making informed trading decisions and managing risk.
 
 This project addresses the problem of predicting the direction of the next day's closing price using historical data.
 
-We will be comparing 10-day vs 21-day MA (commonly used date ranges in trading) and trading volume to see which is a better predictor of stock price. 
-•	10-day MA is an indicator for short term volatility/price changes
-•	21-day MA reflects longer term trends
-•	Volume reflects market participation and sentiment, high volume can be an indicator of volatility
-
 ### 🎯 Goal
 
 To use moving average (MA) and volume as predictors of stock price movement, and analyze how these indicators behave in the context of broader market volatility (e.g., the COVID-19 pandemic).
+
+[A moving average (MA) is a widely used statistical indicator in financial markets that helps smooth out price data by creating a constantly updated average price ](https://www.investing.com/academy/trading/what-is-moving-average/#defining-the-moving-average). 
 
 ### 📊 Features Used
 
 - **Index**
 - **Date**
+- **Close**
+- **10-day MA**: Indicator for short-term volatility/price changes. Calculated by adding up the closing price of the selected Index for the past 10 days and dividing the sum by 10. Each day you drop the oldest data point and add the latest, keeping the window fixed at 10 days. 
+- **21-day MA**: Reflects longer-term trends. Calculated by adding up the closing price of the selected Index for the past 21 days and dividing the sum by 21. Each day you drop the oldest data point and add the latest, keeping the window fixed at 21 days. 
+- **Volume**: Reflects market participation and sentiment; high volume can indicate volatility  
 
 ### 🏛️ Selected Indexes
 
@@ -47,23 +48,18 @@ To use moving average (MA) and volume as predictors of stock price movement, and
 
 ## 🔬 Methodology
 
-1.	Clean/filter data
--	Remove missing values
--	Continuity for dates (market closures)
--	Filter out only useful indexes 
-2.	Calculate 10 and 21 day MAs per index
-3.	Split data into test/train
--  Include all selected indexes so the model is trained on all 3
--  Making sure to keep chronological order
-4.	5-fold cross validation 
--  Timeseries based
--  Rolling window validation
-5.	Train the model using logistic regression
-6.	Run 2 models:
-- Pre-processing: standardize volume and MAs
-- model 1: 10-day MA + volume
-- model 2: 21-day MA + volume
-7.	Compute and plot AUC curves and confusion matrixes
+1. Clean and filter data  
+2. Remove missing values  
+3. Ensure date continuity (account for market closures)  
+4. Filter for selected indexes  
+5. Calculate 10-day and 21-day MAs per index  
+6. Split data into train/test sets (chronological order preserved)  
+7. Use 5-fold time-series cross-validation (rolling window)  
+8. Train logistic regression models:  
+   - **Model 1:** 10-day MA + Volume  
+   - **Model 2:** 21-day MA + Volume  
+9. Standardize volume and MA features  
+10. Evaluate using AUC curves and confusion matrices  
 
 ---
 
@@ -92,21 +88,31 @@ Develop a classification model to determine whether the 10-day or 21-day MA comb
 
 ### 👥 Stakeholders
 
-- Investors  
-- Financial institutions  
+- Investors 
+- Financial Analysts
+- Portfolio Managers
+- Financial Institutions  
 
 ---
 
 ## 🧹 Data Cleaning
 
 - **Objective:**  
-  *(To be completed)*
+To prepare a clean and focused dataset for analysis by isolating relevant stock market indexes and time periods, ensuring data integrity through null value removal.
 
-- **Method:**  
-  *(To be completed)*
+- **Method:**
+   Filtered the dataset to include only three selected indexes:
+   - NYA – NYSE (USA)
+   - IXIC – NASDAQ (USA)
+   - GSPTSE – TSX (Canada)
+
+   Applied two distinct date range filters:
+  - Pre-COVID: March 2019 to February 2020
+  - Post-COVID: March 2020 to May 2021
+  - Removed all rows containing null values to ensure consistency and reliability in downstream analysis.*
 
 - **Results:**  
-  *(To be completed)*
+Dataset reduced to only relevant indexes and timeframes, improving focus and analytical clarity. Null values successfully eliminated, resulting in a clean dataset ready for visualization and performance comparison.
 
 ---
 
@@ -148,6 +154,4 @@ Develop a classification model to determine whether the 10-day or 21-day MA comb
 |-------------------|-------|
 | Fay Kisteroff     |       |
 | Olena Peleshko    |       |
-| Nneka Asuzu       |       |
 | Deanne Acres-Lans |       |
-| Ruchira Malhotra  |       |
