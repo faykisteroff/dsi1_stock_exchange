@@ -1,4 +1,4 @@
-# dsi1_stock_exchange
+3# dsi1_stock_exchange
 
 # 📈 Predicting Stock Index Closing Prices
 
@@ -145,19 +145,19 @@ Dataset reduced to only relevant indexes and timeframes, improving focus and ana
 
 Pre-covid train/test:
 
-AUC ROC = 0.553
+AUC ROC = 0.56
 
 | measure  | down value (0) | up value (1) | 
 |----------|----------------|--------------|
-|precision |      0.66      |    0.41      |
-|recall    |      0.55      |    0.53      | 
-|f1        |      0.60      |    0.46      | 
+|precision |      0.67      |    0.43      |
+|recall    |      0.66      |    0.44      | 
+|f1        |      0.66      |    0.44      | 
 
 Post-covid:
 
-AUC ROC = 0.522
-Precision = 0.421
-Recall = 0.180
+AUC ROC = 0.526
+Precision = 0.451
+Recall = 0.174
 
 
 ---
