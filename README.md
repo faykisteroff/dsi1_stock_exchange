@@ -74,6 +74,25 @@ To use moving average (MA) and volume as predictors of stock price movement, and
 7.	Compute and plot AUC curves and confusion matrixes
 
 ---
+⚠️ Risks & Limitations
+
+While the methodology is well‑defined, several risks and potential issues should be acknowledged:
+
+- **Data Availability:**
+  - Missing data during market closures, holidays, or trading halts may introduce gaps that affect model accuracy.
+
+- **Historical Assumptions:**
+  - The analysis assumes that historical patterns will continue to hold.
+  - Structural shifts (e.g., COVID‑19 pandemic, regulatory changes, geopolitical events) can invalidate these assumptions.
+
+- **Market Complexity:**
+ - Stock prices are influenced by many interacting variables (macroeconomic indicators, sentiment, global events) beyond the features currently used.
+ - Simplified models may fail to capture nonlinear relationships.
+
+- **Model Generalizability:**
+ - Performance may vary across different time periods or regimes (e.g., pre‑COVID vs. post‑COVID).
+
+---
 
 ## 🛠️ Technical Stack
 
