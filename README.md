@@ -215,5 +215,5 @@ Recall = 0.174
 |-------------------|-----------------------------------|
 | Fay Kisteroff     |  https://youtu.be/Q4UN3ItvE8M     |
 | Olena Peleshko    |                                   |
-| Deanne Acres-Lans |                                   |
+| Deanne Acres-Lans |  https://youtu.be/-b15ZRbvbRg     |
 
