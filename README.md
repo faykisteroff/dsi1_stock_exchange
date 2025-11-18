@@ -211,9 +211,9 @@ Recall = 0.174
 
 ## 🔗 Team Member Links
 
-| Name              |              Links                |
-|-------------------|-----------------------------------|
-| Fay Kisteroff     |  https://youtu.be/Q4UN3ItvE8M     |
-| Olena Peleshko    |                                   |
-| Deanne Acres-Lans |  https://youtu.be/-b15ZRbvbRg     |
+| Name              |              Links                                                      |
+|-------------------|-------------------------------------------------------------------------|
+| Fay Kisteroff     |  https://youtu.be/Q4UN3ItvE8M                                           |
+| Olena Peleshko    |  https://drive.google.com/file/d/1rI5Y8ExMxX4fGXlrRUa35wEKiTfDdt1C/view |
+| Deanne Acres-Lans |  https://youtu.be/-b15ZRbvbRg                                           |
 
