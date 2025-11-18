@@ -178,6 +178,34 @@ AUC ROC = 0.526
 Precision = 0.451
 Recall = 0.174
 
+---
+
+## 📊 Visualizations
+- **Objective:**
+  
+To create easy to underatand data visualizations representing the accuracy of our machine learning model.
+
+- **Method:**
+
+The project's evaluation relies on a machine learning workflow that loads a trained stock prediction model and pre-split Pre-COVID and Post-COVID datasets. The core methodology involves using the model to generate both continuous probability scores and discrete binary predictions for both market periods. These predictions are then analyzed and compared using Python's visualization stack (Matplotlib and Seaborn) and Scikit-learn metrics to create four key comparative performance plots: ROC Curves, Precision-Recall Curves, Confusion Matrices, and Predicted Probability Histograms, all designed to visually assess how the model's accuracy and confidence changed between the stable pre-pandemic environment and the volatile post-pandemic environment
+
+- **Results:**  
+
+ROC Curves - Used to evaluate the performance of the model across all possible classification thresholds.
+
+<img width="2072" height="1634" alt="roc_curve" src="https://github.com/user-attachments/assets/246b39dc-81ca-4a49-be1b-2e2c334eebb0" />
+
+Confusion Matrixes - Used to show the performance of the classification model at a single threshold by counting the number of correct and incorrect predictions for each class.
+
+<img width="4380" height="1425" alt="confusion_matrix" src="https://github.com/user-attachments/assets/777c825c-21eb-47d1-b9cd-873c8e9700cf" />
+
+Precision Recall Curves - Used to evaluate the performance of machine learning model across a range of possible thresholds
+
+<img width="2072" height="1634" alt="precision_recall_curve" src="https://github.com/user-attachments/assets/4e4dd9dc-07fb-4fee-a40c-4f7a54d91479" />
+
+Predicted Probability Histograms - Used to assess the calibration and confidence of the machine learning model.
+
+<img width="2967" height="2368" alt="hist_plot" src="https://github.com/user-attachments/assets/365e0a63-8ccf-4d1c-af65-a748542b7802" />
 
 ---
 
